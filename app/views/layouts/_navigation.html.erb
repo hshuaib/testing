@@ -1,0 +1,22 @@
+<%# navigation styled for Bootstrap 3.0 %>
+
+<link href= "../../assets/stylesheets/1st_load_framework.css" rel= "stylesheet" type= "text/css " />
+<nav class="navbar navbar-inverse navbar-fixed-top" id="rtl">
+  <div class="container">
+    <div class="navbar-header" id="rtl" >
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to 'الصفحة الرئيسية', root_path, class: 'navbar-brand' %>
+    </div>
+    <div class="collapse navbar-collapse" id="rtl">
+      <ul class="nav navbar-nav" id="rtl">
+        <%= render 'layouts/navigation_links' %>
+        <%= render 'layouts/nav_links_for_auth' %>
+      </ul>
+    </div>
+  </div>
+</nav>
