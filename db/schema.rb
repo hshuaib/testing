@@ -11,7 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140224203311) do
+ActiveRecord::Schema.define(version: 20160317151900) do
+
+  create_table "applicants", force: :cascade do |t|
+    t.string   "name"
+    t.string   "QID"
+    t.string   "nationality"
+    t.date     "DateOfBirth"
+    t.string   "gender"
+    t.string   "status"
+    t.integer  "noOfChildren"
+    t.string   "livingArea"
+    t.string   "phoneNo"
+    t.string   "mobileNo"
+    t.string   "disability"
+    t.string   "details"
+    t.text     "notes"
+    t.string   "age"
+    t.string   "reason"
+    t.string   "education"
+    t.text     "workshop"
+    t.boolean  "currentJob"
+    t.text     "jobDescription"
+    t.text     "abilities"
+    t.text     "preference"
+    t.string   "skills"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

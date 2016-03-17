@@ -1,0 +1,118 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+<%= image_tag @applicant.image.url %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @applicant.name %>
+</p>
+
+<p>
+  <strong>Qid:</strong>
+  <%= @applicant.QID %>
+</p>
+
+<p>
+  <strong>Nationality:</strong>
+  <%= @applicant.nationality %>
+</p>
+
+<p>
+  <strong>Dateofbirth:</strong>
+  <%= @applicant.DateOfBirth %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @applicant.gender %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @applicant.status %>
+</p>
+
+<p>
+  <strong>Noofchildren:</strong>
+  <%= @applicant.noOfChildren %>
+</p>
+
+<p>
+  <strong>Livingarea:</strong>
+  <%= @applicant.livingArea %>
+</p>
+
+<p>
+  <strong>Phoneno:</strong>
+  <%= @applicant.phoneNo %>
+</p>
+
+<p>
+  <strong>Mobileno:</strong>
+  <%= @applicant.mobileNo %>
+</p>
+
+<p>
+  <strong>Disability:</strong>
+  <%= @applicant.disability %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @applicant.details %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @applicant.notes %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @applicant.age %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @applicant.reason %>
+</p>
+
+<p>
+  <strong>Education:</strong>
+  <%= @applicant.education %>
+</p>
+
+<p>
+  <strong>Workshop:</strong>
+  <%= @applicant.workshop %>
+</p>
+
+<p>
+  <strong>Currentjob:</strong>
+  <%= @applicant.currentJob %>
+</p>
+
+<p>
+  <strong>Jobdescription:</strong>
+  <%= @applicant.jobDescription %>
+</p>
+
+<p>
+  <strong>Abilities:</strong>
+  <%= @applicant.abilities %>
+</p>
+
+<p>
+  <strong>Preference:</strong>
+  <%= @applicant.preference %>
+</p>
+
+<p>
+  <strong>Skills:</strong>
+  <%= @applicant.skills %>
+</p>
+
+<%= link_to 'Edit', edit_applicant_path(@applicant) %> |
+<%= link_to 'Back', applicants_path %>

@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Applicants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Qid</th>
+      <th>Nationality</th>
+      <th>Dateofbirth</th>
+      <th>Gender</th>
+      <th>Status</th>
+      <th>Noofchildren</th>
+      <th>Livingarea</th>
+      <th>Phoneno</th>
+      <th>Mobileno</th>
+      <th>Disability</th>
+      <th>Details</th>
+      <th>Notes</th>
+      <th>Age</th>
+      <th>Reason</th>
+      <th>Education</th>
+      <th>Workshop</th>
+      <th>Currentjob</th>
+      <th>Jobdescription</th>
+      <th>Abilities</th>
+      <th>Preference</th>
+      <th>Skills</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @applicants.each do |applicant| %>
+      <tr>
+        <td><%= applicant.name %></td>
+        <td><%= applicant.QID %></td>
+        <td><%= applicant.nationality %></td>
+        <td><%= applicant.DateOfBirth %></td>
+        <td><%= applicant.gender %></td>
+        <td><%= applicant.status %></td>
+        <td><%= applicant.noOfChildren %></td>
+        <td><%= applicant.livingArea %></td>
+        <td><%= applicant.phoneNo %></td>
+        <td><%= applicant.mobileNo %></td>
+        <td><%= applicant.disability %></td>
+        <td><%= applicant.details %></td>
+        <td><%= applicant.notes %></td>
+        <td><%= applicant.age %></td>
+        <td><%= applicant.reason %></td>
+        <td><%= applicant.education %></td>
+        <td><%= applicant.workshop %></td>
+        <td><%= applicant.currentJob %></td>
+        <td><%= applicant.jobDescription %></td>
+        <td><%= applicant.abilities %></td>
+        <td><%= applicant.preference %></td>
+        <td><%= applicant.skills %></td>
+        <td><%= link_to 'Show', applicant %></td>
+        <td><%= link_to 'Edit', edit_applicant_path(applicant) %></td>
+        <td><%= link_to 'Destroy', applicant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Applicant', new_applicant_path %>

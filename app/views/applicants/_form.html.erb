@@ -1,0 +1,112 @@
+<%= form_for @applicant, html: {multipart: true} do |f| %>
+  <% if @applicant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@applicant.errors.count, "error") %> prohibited this applicant from being saved:</h2>
+
+      <ul>
+      <% @applicant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image, :required => true  %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, :required => true %>
+  </div>
+  <div class="field">
+    <%= f.label :QID %><br>
+    <%= f.text_field :QID, :required => true  %>
+  </div>
+  <div class="field">
+    <%= f.label :nationality %><br>
+    <%= f.text_field :nationality, :required => true  %>
+  </div>
+  <div class="field">
+    <%= f.label :DateOfBirth %><br>
+    <%= f.date_select :DateOfBirth, :required => true  %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender, :required => true  %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status, :required => true  %>
+  </div>
+  <div class="field">
+    <%= f.label :noOfChildren %><br>
+    <%= f.number_field :noOfChildren, :required => true  %>
+  </div>
+  <div class="field">
+    <%= f.label :livingArea %><br>
+    <%= f.text_field :livingArea, :required => true  %>
+  </div>
+  <div class="field">
+    <%= f.label :phoneNo %><br>
+    <%= f.text_field :phoneNo %>
+  </div>
+  <div class="field">
+    <%= f.label :mobileNo %><br>
+    <%= f.text_field :mobileNo, :required => true  %>
+  </div>
+  <div class="field">
+    <%= f.label :disability %><br>
+    <%= f.text_field :disability, :required => true  %>
+  </div>
+  <div class="field">
+    <%= f.label :details %><br>
+    <%= f.text_field :details, :required => true  %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.text_field :age, :required => true  %>
+  </div>
+  <div class="field">
+    <%= f.label :reason %><br>
+    <%= f.text_field :reason %>
+  </div>
+  <div class="field">
+    <%= f.label :education %><br>
+    <%= f.text_field :education, :required => true %>
+  </div>
+  <div class="field">
+    <%= f.label :workshop %><br>
+    <%= f.text_area :workshop %>
+  </div>
+  <div class="field">
+    <%= f.label :currentJob %><br>
+    <%= f.check_box :currentJob %>
+  </div>
+  <div class="field">
+    <%= f.label :jobDescription %><br>
+    <%= f.text_area :jobDescription %>
+  </div>
+  <div class="field">
+    <%= f.label :abilities %><br>
+    <%= f.text_area :abilities %>
+  </div>
+  <div class="field">
+    <%= f.label :preference %><br>
+    <%= f.text_area :preference %>
+  </div>
+  <div class="field">
+    <%= f.label :skills %><br>
+    <%= f.text_field :skills %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+<% end %>
