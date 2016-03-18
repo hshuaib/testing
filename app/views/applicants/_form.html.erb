@@ -2,7 +2,6 @@
   <% if @applicant.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@applicant.errors.count, "error") %> prohibited this applicant from being saved:</h2>
-
       <ul>
       <% @applicant.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,99 +9,126 @@
       </ul>
     </div>
   <% end %>
-
-  
+<hr>  
+<br>
   <div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :image, :required => true  %>
+ البيانات الشخصية  <br>
   </div>
-  
+
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name,"الأسم"%><br>
     <%= f.text_field :name, :required => true %>
   </div>
   <div class="field">
-    <%= f.label :QID %><br>
+    <%= f.label :QID, "الرقم الشخصي" %><br>
     <%= f.text_field :QID, :required => true  %>
   </div>
+
   <div class="field">
-    <%= f.label :nationality %><br>
-    <%= f.text_field :nationality, :required => true  %>
+    <%= f.label :image, "صورة البطاقة الشخصية"%><br>
+    <%= f.file_field :image, :required => true  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nationality, "الجنسية"%><br>
+    <%= f.select(:nationality, Applicant::NATIONALITY_LIST, :required => true ) %>
   </div>
   <div class="field">
-    <%= f.label :DateOfBirth %><br>
+    <%= f.label :DateOfBirth, "تاريخ الميلاد"%><br>
     <%= f.date_select :DateOfBirth, :required => true  %>
   </div>
   <div class="field">
-    <%= f.label :gender %><br>
-    <%= f.text_field :gender, :required => true  %>
+    <%= f.label :gender, "الجنس"%><br>
+    <%= f.select(:gender, Applicant::SEX_LIST,:required => true)  %>
   </div>
   <div class="field">
-    <%= f.label :status %><br>
-    <%= f.text_field :status, :required => true  %>
+    <%= f.label :status, "الحالة الإجتماعية" %><br>
+    <%= f.select(:status,Applicant::STATUS_LIST, :required => true)  %>
   </div>
   <div class="field">
-    <%= f.label :noOfChildren %><br>
-    <%= f.number_field :noOfChildren, :required => true  %>
+    <%= f.label :noOfChildren, "عدد الأطفال" %><br>
+    <%= f.number_field :noOfChildren  %>
   </div>
   <div class="field">
-    <%= f.label :livingArea %><br>
+    <%= f.label :livingArea, "مكان السكن"%><br>
     <%= f.text_field :livingArea, :required => true  %>
   </div>
   <div class="field">
-    <%= f.label :phoneNo %><br>
+    <%= f.label :phoneNo, "رقم الهاتف" %><br>
     <%= f.text_field :phoneNo %>
   </div>
   <div class="field">
-    <%= f.label :mobileNo %><br>
+    <%= f.label :mobileNo, "الجوال" %><br>
     <%= f.text_field :mobileNo, :required => true  %>
   </div>
+<hr>  
+
   <div class="field">
-    <%= f.label :disability %><br>
+حالة الإعاقة  <br>
+  </div>
+
+
+
+  <div class="field">
+    <%= f.label :disability, "نوع الإعاقة"%><br>
     <%= f.text_field :disability, :required => true  %>
   </div>
   <div class="field">
-    <%= f.label :details %><br>
+    <%= f.label :details, "التفاصيل"%><br>
     <%= f.text_field :details, :required => true  %>
   </div>
   <div class="field">
-    <%= f.label :notes %><br>
+    <%= f.label :notes, "ملاحظات"%><br>
     <%= f.text_area :notes %>
   </div>
   <div class="field">
-    <%= f.label :age %><br>
+    <%= f.label :age, "العمر عند الإصابة بالإعاقة" %><br>
     <%= f.text_field :age, :required => true  %>
   </div>
   <div class="field">
-    <%= f.label :reason %><br>
+    <%= f.label :reason, "أسباب الإصابة" %><br>
     <%= f.text_field :reason %>
   </div>
+<hr>  
+
+
   <div class="field">
-    <%= f.label :education %><br>
-    <%= f.text_field :education, :required => true %>
+المؤهلات والخبرات <br>
+  </div>
+
+
+
+  <div class="field">
+    <%= f.label :education, "المستوى التعليمي"%><br>
+    <%= f.select(:education,Applicant::EDUCATION_LIST, :required => true) %>
   </div>
   <div class="field">
-    <%= f.label :workshop %><br>
+    <%= f.label :workshop, "الدورات" %><br>
     <%= f.text_area :workshop %>
   </div>
   <div class="field">
-    <%= f.label :currentJob %><br>
-    <%= f.check_box :currentJob %>
+    <%= f.label :currentJob, "هل تشغل وظيفة حاليًا"%><br>
+    <%= f.label :currentJob, "نعم", :value => "true"  %>
+    <%= f.radio_button :currentJob, true %>
+    <%= f.label :currentJob, "لا", :value => "false"  %>
+    <%= f.radio_button :currentJob, false %>
+
+
   </div>
   <div class="field">
-    <%= f.label :jobDescription %><br>
+    <%= f.label :jobDescription, "الوظائف التي عملت بها"%><br>
     <%= f.text_area :jobDescription %>
   </div>
   <div class="field">
-    <%= f.label :abilities %><br>
+    <%= f.label :abilities, " الوظيفة التي تستطيع القيام بها" %><br>
     <%= f.text_area :abilities %>
   </div>
   <div class="field">
-    <%= f.label :preference %><br>
+    <%= f.label :preference, "الوزارات/ المؤسسات المرشحة للتوظيف" %><br>
     <%= f.text_area :preference %>
   </div>
   <div class="field">
-    <%= f.label :skills %><br>
+    <%= f.label :skills, "الخبرات"%><br>
     <%= f.text_field :skills %>
   </div>
   <div class="actions">
