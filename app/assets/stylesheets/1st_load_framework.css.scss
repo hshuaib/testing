@@ -18,6 +18,10 @@ img {
   //text-align: right;
   //float: right;
   }
+  
+
+
+
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
@@ -45,7 +49,7 @@ main {
   background-color: white;
   padding-bottom: 80px;
   width: 100%;
-  margin-top: 51px; // accommodate the navbar
+  margin-top: 0px; // accommodate the navbar
   
   }
 section {
@@ -87,4 +91,95 @@ section {
   @extend .btn;
   @extend .btn-primary;
   @extend .btn-xs;
+}
+
+
+
+.carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+	height: 500px;
+
+}
+
+.carousel-caption h3 {
+    color: #fff !important;
+}
+
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+}
+
+
+
+
+
+
+
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 16px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 0px;
+    border-radius: 0;
+	direction: rtl;
+	font-family: "Menlo", Times, serif;
+}
+
+.fonty
+{
+	font-family: "Menlo", Times, serif;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+
+
+
+/* قدم طلباً*/
+.jumbotron { 
+    background-color: #f4511e; /* Orange */
+    color: #ffffff;
+	font-family: "Menlo", Times, serif;
+	 padding: 100px 25px;
+}
+
+.container-fluid {
+    padding: 60px 50px;
+}
+
+
+
+
+
+/* about company*/
+
+.logo {
+    font-size: 200px;
+}
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
 }

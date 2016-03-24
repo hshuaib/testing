@@ -1,5 +1,8 @@
 class ApplicantsController < ApplicationController
   before_action :set_applicant, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_filter :admin_only#, :except => :show
+
 
   # GET /applicants
   # GET /applicants.json
@@ -62,6 +65,14 @@ class ApplicantsController < ApplicationController
   end
 
   private
+  # this below code for checking if logged in user is the admin!
+    def admin_only
+     unless current_user.admin?
+       redirect_to :back, :alert => "Access denied."
+     end
+   end
+  
+  
     # Use callbacks to share common setup or constraints between actions.
     def set_applicant
       @applicant = Applicant.find(params[:id])

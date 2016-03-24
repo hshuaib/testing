@@ -1,14 +1,16 @@
 <%= form_for @applicant, html: {multipart: true} do |f| %>
-  <% if @applicant.errors.any? %>
+  <% if @applicant.errors.full_messages.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@applicant.errors.count, "error") %> prohibited this applicant from being saved:</h2>
       <ul>
       <% @applicant.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li><%= message if @applicant.errors.full_messages.first == message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
+  
+  
 <hr>  
 <br>
   <div class="field">
@@ -16,8 +18,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :name,"الأسم"%><br>
-    <%= f.text_field :name, :required => true %>
+    <%= f.label :name, "الأسم"%><br>
+    <%= f.text_field :name, :required => true  %>
   </div>
   <div class="field">
     <%= f.label :QID, "الرقم الشخصي" %><br>
@@ -70,7 +72,12 @@
 
 
   <div class="field">
-    <%= f.label :disability, "نوع الإعاقة"%><br>
+      <%= f.label :disability, "نوع الإعاقة"%><br>
+	  
+	  <input type= "checkbox" name="إعاقة سمعية"  value="إعاقة سمعية" id="disability"> إعاقة سمعية<br>
+	  <input type= "checkbox" name="إعاقة بصرية" value="إعاقة بصرية" id="disability"> إعاقة بصرية<br>
+	  <input type= "checkbox" name=" إعاقةحركية" value="إعاقة حركية" id="disability"> إعاقة حركية<br>
+	  <input type= "checkbox" name="إعاقة ذهنية" value="إعاقة ذهنية" id="disability"> إعاقة ذهنية<br>
     <%= f.text_field :disability, :required => true  %>
   </div>
   <div class="field">
@@ -95,8 +102,6 @@
   <div class="field">
 المؤهلات والخبرات <br>
   </div>
-
-
 
   <div class="field">
     <%= f.label :education, "المستوى التعليمي"%><br>

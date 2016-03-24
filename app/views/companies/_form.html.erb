@@ -1,0 +1,61 @@
+<%= form_for(@company) do |f| %>
+  <% if @company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@company.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+      <ul>
+      <% @company.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :companyName %><br>
+    <%= f.text_field :companyName %>
+  </div>
+  <div class="field">
+    <%= f.label :jobTitle %><br>
+    <%= f.text_field :jobTitle %>
+  </div>
+  <div class="field">
+    <%= f.label :jobDescription %><br>
+    <%= f.text_area :jobDescription %>
+  </div>
+  <div class="field">
+    <%= f.label :contactPerson %><br>
+    <%= f.text_field :contactPerson %>
+  </div>
+  <div class="field">
+    <%= f.label :mobileNo %><br>
+    <%= f.text_field :mobileNo %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :nationality %><br>
+    <%= f.text_field :nationality %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :disability %><br>
+    <%= f.text_field :disability %>
+  </div>
+  <div class="field">
+    <%= f.label :education %><br>
+    <%= f.text_field :education %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

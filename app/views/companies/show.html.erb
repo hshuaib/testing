@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Companyname:</strong>
+  <%= @company.companyName %>
+</p>
+
+<p>
+  <strong>Jobtitle:</strong>
+  <%= @company.jobTitle %>
+</p>
+
+<p>
+  <strong>Jobdescription:</strong>
+  <%= @company.jobDescription %>
+</p>
+
+<p>
+  <strong>Contactperson:</strong>
+  <%= @company.contactPerson %>
+</p>
+
+<p>
+  <strong>Mobileno:</strong>
+  <%= @company.mobileNo %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @company.email %>
+</p>
+
+<p>
+  <strong>Nationality:</strong>
+  <%= @company.nationality %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @company.gender %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @company.age %>
+</p>
+
+<p>
+  <strong>Disability:</strong>
+  <%= @company.disability %>
+</p>
+
+<p>
+  <strong>Education:</strong>
+  <%= @company.education %>
+</p>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>
