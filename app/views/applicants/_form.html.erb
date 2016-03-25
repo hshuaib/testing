@@ -72,13 +72,14 @@
 
 
   <div class="field">
-      <%= f.label :disability, "نوع الإعاقة"%><br>
+      <%= f.label :disability, "نوع الإعاقة", :required => true%>
+    <%= f.check_box :disability %> "إعاقة سمعية"<br>
 	  
 	  <input type= "checkbox" name="إعاقة سمعية"  value="إعاقة سمعية" id="disability"> إعاقة سمعية<br>
 	  <input type= "checkbox" name="إعاقة بصرية" value="إعاقة بصرية" id="disability"> إعاقة بصرية<br>
 	  <input type= "checkbox" name=" إعاقةحركية" value="إعاقة حركية" id="disability"> إعاقة حركية<br>
 	  <input type= "checkbox" name="إعاقة ذهنية" value="إعاقة ذهنية" id="disability"> إعاقة ذهنية<br>
-    <%= f.text_field :disability, :required => true  %>
+
   </div>
   <div class="field">
     <%= f.label :details, "التفاصيل"%><br>

@@ -1,7 +1,7 @@
 class ApplicantsController < ApplicationController
   before_action :set_applicant, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
-  before_filter :admin_only#, :except => :show
+  #before_action :authenticate_user!
+  before_filter :admin_only, :except => [:create, :new]
 
 
   # GET /applicants
@@ -31,7 +31,7 @@ class ApplicantsController < ApplicationController
 
     respond_to do |format|
       if @applicant.save
-        format.html { redirect_to @applicant, notice: 'Applicant was successfully created.' }
+        format.html { redirect_to page_path('requestSaved'), notice: 'Applicant was successfully created.' }
         format.json { render :show, status: :created, location: @applicant }
       else
         format.html { render :new }

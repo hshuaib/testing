@@ -1,5 +1,7 @@
 class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :edit, :update, :destroy]
+  before_filter :admin_only, :except => [:create, :new]
+  
 
   # GET /companies
   # GET /companies.json
@@ -28,7 +30,7 @@ class CompaniesController < ApplicationController
 
     respond_to do |format|
       if @company.save
-        format.html { redirect_to @company, notice: 'Company was successfully created.' }
+        format.html { redirect_to page_path('requestSaved'), notice: 'Company was successfully created.' }
         format.json { render :show, status: :created, location: @company }
       else
         format.html { render :new }
@@ -62,6 +64,14 @@ class CompaniesController < ApplicationController
   end
 
   private
+  
+  # this below code for checking if logged in user is the admin!
+    def admin_only
+     unless current_user.admin?
+       redirect_to :back, :alert => "Access denied."
+     end
+   end
+  
     # Use callbacks to share common setup or constraints between actions.
     def set_company
       @company = Company.find(params[:id])
