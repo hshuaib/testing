@@ -15,3 +15,12 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+
+//resizing  fuction :didn't work
+	function resizeText(multiplier) {
+	  if (document.body.style.fontSize == "") {
+	    document.body.style.fontSize = "17px";
+	  }
+	  document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 0.2) + "px";
+	}

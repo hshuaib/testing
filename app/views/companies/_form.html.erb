@@ -10,52 +10,91 @@
       </ul>
     </div>
   <% end %>
+<hr>  
+<br>
 
-  <div class="field">
-    <%= f.label :companyName %><br>
+  <div class="field fonty">
+<h3>
+بيانات الوظيفة 
+</h3>
+  <br>
+  </div>
+
+
+<br/>
+  <div class="field fonty">
+    <%= f.label :companyName, "اسم الشركة" %><br>
     <%= f.text_field :companyName %>
   </div>
-  <div class="field">
-    <%= f.label :jobTitle %><br>
+  <br/>
+  
+  <div class="field fonty">
+    <%= f.label :jobTitle, "اسم الوظيفة" %><br>
     <%= f.text_field :jobTitle %>
   </div>
-  <div class="field">
-    <%= f.label :jobDescription %><br>
+  <br/>
+  
+  <div class="field fonty">
+    <%= f.label :jobDescription, "تفاصيل الوظيفة" %><br>
     <%= f.text_area :jobDescription %>
   </div>
-  <div class="field">
-    <%= f.label :contactPerson %><br>
+  <br/>
+  
+  <div class="field fonty">
+    <%= f.label :contactPerson, "اسم مقدم الطلب" %><br>
     <%= f.text_field :contactPerson %>
   </div>
-  <div class="field">
-    <%= f.label :mobileNo %><br>
+  <br/>
+  
+  <div class="field fonty">
+    <%= f.label :mobileNo, "رقم التواصل" %><br>
     <%= f.text_field :mobileNo %>
   </div>
-  <div class="field">
-    <%= f.label :email %><br>
+  <br/>
+  
+  <div class="field fonty">
+    <%= f.label :email, "البريد الإلكتروني" %><br>
     <%= f.text_field :email %>
   </div>
-  <div class="field">
-    <%= f.label :nationality %><br>
+  
+  <br/>
+  
+  <h3 class="field fonty">
+  مواصفات الموظف المطلوبة 
+  </h3>
+  <br/>
+  
+  <div class="field fonty">
+    <%= f.label :nationality, "الجنسية" %><br>
     <%= f.text_field :nationality %>
   </div>
-  <div class="field">
-    <%= f.label :gender %><br>
+  <br/>
+  
+  <div class="field fonty">
+    <%= f.label :gender, "الجنس" %><br>
     <%= f.text_field :gender %>
   </div>
-  <div class="field">
-    <%= f.label :age %><br>
+  <br/>
+  
+  <div class="field fonty">
+    <%= f.label :age, "العمر" %><br>
     <%= f.number_field :age %>
   </div>
-  <div class="field">
-    <%= f.label :disability %><br>
+  <br/>
+  
+  <div class="field fonty">
+    <%= f.label :disability, "نوع الإعاقة" %><br>
     <%= f.text_field :disability %>
   </div>
-  <div class="field">
-    <%= f.label :education %><br>
+  <br/>
+  
+  <div class="field fonty">
+    <%= f.label :education, "المستوى التعليمي" %><br>
     <%= f.text_field :education %>
   </div>
-  <div class="actions">
+  <br/>
+  
+  <div class="actions fonty">
     <%= f.submit %>
   </div>
 <% end %>

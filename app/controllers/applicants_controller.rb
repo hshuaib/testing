@@ -1,13 +1,13 @@
 class ApplicantsController < ApplicationController
   before_action :set_applicant, only: [:show, :edit, :update, :destroy]
-  #before_action :authenticate_user!
+  before_action :authenticate_user!, :except => [:create, :new]
   before_filter :admin_only, :except => [:create, :new]
 
 
   # GET /applicants
   # GET /applicants.json
   def index
-    @applicants = Applicant.all
+    @applicants = Applicant.all        
   end
 
   # GET /applicants/1

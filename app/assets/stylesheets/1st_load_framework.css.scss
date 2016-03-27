@@ -96,8 +96,8 @@ section {
 
 
 .carousel-inner img {
-    -webkit-filter: grayscale(90%);
-    filter: grayscale(90%); /* make all photos black and white */ 
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%); /* make all photos black and white */ 
     width: 100%; /* Set width to 100% */
     margin: auto;
 	height: 500px;
@@ -114,8 +114,16 @@ section {
     }
 }
 
+//.left:hover{
+//background: white;
+//opacity:0.8;
+//}
 
+.carousel-control.left {
+background:none;}
 
+.carousel-control.right {
+background:none;}
 
 
 
@@ -123,29 +131,60 @@ section {
 
 .navbar {
     margin-bottom: 0;
-    background-color: #f4511e;
+    background-color: white;
     z-index: 9999;
     border: 0;
-    font-size: 16px !important;
+    font-size: 13px !important;
     line-height: 1.42857143 !important;
     letter-spacing: 0px;
     border-radius: 0;
 	direction: rtl;
-	font-family: "Menlo", Times, serif;
-}
+	font-family: 'Droid Arabic Kufi', serif;
+	}
+
+
+
+
+
+
 
 .fonty
 {
-	font-family: "Menlo", Times, serif;
+font-family: 'Droid Arabic Kufi', serif;
+direction: rtl;
+color:black;
 }
 
+.floatR
+{
+float: right;
+}
+.event 
+{
+padding-right: 350px;
+}
+.eventheading
+{
+font-family: 'Droid Arabic Kufi', serif;
+direction: rtl;
+color:maroon;
+}
+
+
+.slidertext {
+color:black ;
+}
+
+//nav bar text
 .navbar li a, .navbar .navbar-brand {
-    color: #fff !important;
+    color: black !important;
 }
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #f4511e !important;
-    background-color: #fff !important;
+ color: gray!important;
+ 
+ //   color: white!important;
+ //   background-color: black !important;
 }
 
 .navbar-default .navbar-toggle {
@@ -156,11 +195,19 @@ section {
 
 
 
+.larger 
+{
+    font-size: 16px !important;
+	 //font-weight: bold;
+
+}
+
+
 /* قدم طلباً*/
 .jumbotron { 
-    background-color: #f4511e; /* Orange */
-    color: #ffffff;
-	font-family: "Menlo", Times, serif;
+    background-color:white ; /* #f4511e Orange */
+    color: black;
+font-family: 'Droid Arabic Kufi', serif;
 	 padding: 100px 25px;
 }
 
@@ -182,4 +229,27 @@ section {
         text-align: center;
         margin: 25px 0;
     }
+}
+
+
+
+
+
+//font 
+
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v2/DroidKufi-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v2/DroidKufi-Regular.woff) format('woff'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v2/DroidKufi-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v2/DroidKufi-Bold.eot?#iefix) format('embedded-opentype'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v2/DroidKufi-Bold.woff) format('woff'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v2/DroidKufi-Bold.ttf) format('truetype');
 }
