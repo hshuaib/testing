@@ -1,7 +1,7 @@
 // import the CSS framework
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+										////////BOOTSTRAP GENERAL/////////
 // make all images responsive by default
 img {
   @extend .img-responsive;
@@ -19,8 +19,6 @@ img {
   //float: right;
   }
   
-
-
 
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
@@ -93,12 +91,15 @@ section {
   @extend .btn-xs;
 }
 
-
+									
+									
+									
+									/////////CAROUSEL///////////
 
 .carousel-inner img {
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%); /* make all photos black and white */ 
-    width: 100%; /* Set width to 100% */
+    width: 90%; /* Set width to 100% */
     margin: auto;
 	height: 500px;
 
@@ -120,15 +121,18 @@ section {
 //}
 
 .carousel-control.left {
-background:none;}
+background:none;
+}
 
 .carousel-control.right {
-background:none;}
+background:none;
+}
 
 
 
 
-
+											
+											////////NAVBAR////////////
 .navbar {
     margin-bottom: 0;
     background-color: white;
@@ -143,37 +147,6 @@ background:none;}
 	}
 
 
-
-
-
-
-
-.fonty
-{
-font-family: 'Droid Arabic Kufi', serif;
-direction: rtl;
-color:black;
-}
-
-.floatR
-{
-float: right;
-}
-.event 
-{
-padding-right: 350px;
-}
-.eventheading
-{
-font-family: 'Droid Arabic Kufi', serif;
-direction: rtl;
-color:maroon;
-}
-
-
-.slidertext {
-color:black ;
-}
 
 //nav bar text
 .navbar li a, .navbar .navbar-brand {
@@ -195,12 +168,87 @@ color:black ;
 
 
 
+
+										///////FONT///////// 
+
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v2/DroidKufi-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v2/DroidKufi-Regular.woff) format('woff'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v2/DroidKufi-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v2/DroidKufi-Bold.eot?#iefix) format('embedded-opentype'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v2/DroidKufi-Bold.woff) format('woff'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v2/DroidKufi-Bold.ttf) format('truetype');
+}
+
+
+
+
+									/////////SIMPLE CLASSES///////////
+.fonty
+{
+font-family: 'Droid Arabic Kufi', serif;
+direction: rtl;
+color:black;
+}
+
+.floatR
+{
+float: right;
+}
+
+.event 
+{
+padding-right: 350px;
+}
+.eventheading
+{
+font-family: 'Droid Arabic Kufi', serif;
+direction: rtl;
+color:maroon;
+}
+
+.tablespace{
+padding-left: 13px;
+padding-right: 13px;
+ text-align: center;
+}
+
+.down
+{
+padding-bottom:20px;
+}
+
+.slidertext {
+color:black ;
+}
+
+.center{
+text-align: center;}
+
+.table{
+border: 1px solid black;}
+
+
 .larger 
 {
     font-size: 16px !important;
 	 //font-weight: bold;
-
 }
+
+
+.formpad{
+
+padding-right:30px;}
+
+
 
 
 /* قدم طلباً*/
@@ -214,7 +262,6 @@ font-family: 'Droid Arabic Kufi', serif;
 .container-fluid {
     padding: 60px 50px;
 }
-
 
 
 
@@ -234,22 +281,3 @@ font-family: 'Droid Arabic Kufi', serif;
 
 
 
-
-//font 
-
-@font-face {
-  font-family: 'Droid Arabic Kufi';
-  font-style: normal;
-  font-weight: 400;
-  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v2/DroidKufi-Regular.eot?#iefix) format('embedded-opentype'),
-       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v2/DroidKufi-Regular.woff) format('woff'),
-       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v2/DroidKufi-Regular.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Droid Arabic Kufi';
-  font-style: normal;
-  font-weight: 700;
-  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v2/DroidKufi-Bold.eot?#iefix) format('embedded-opentype'),
-       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v2/DroidKufi-Bold.woff) format('woff'),
-       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v2/DroidKufi-Bold.ttf) format('truetype');
-}

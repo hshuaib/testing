@@ -1,21 +1,25 @@
 <p id="notice"><%= notice %></p>
+<br>
+<br>
+<br>
 
-<h1>قائمة الشركات</h1>
-
-<table>
+<h2 class="fonty" align="center">قائمة الشركات</h2>
+<br>
+<br>
+<table class="fonty table" align="center">
   <thead>
     <tr>
-      <th> اسم الشركة </th>
-      <th>اسم الوظيفة</th>
+      <th class="tablespace eventheading down"> اسم الشركة </th>
+      <th class="tablespace eventheading down">اسم الوظيفة</th>
     <%#  <th>تفاصيل الوظيفة</th> %>
     <%#  <th>اسم مقدم الطلب</th> %>
     <%#  <th>رقم التواصل</th> %>
     <%#  <th>البريد الإلكتروني</th> %>
-      <th>الجنسية</th>
-      <th>الجنس</th>
-      <th>العمر</th>
-      <th>الإعاقة</th>
-      <th>المستوى التعليمي</th>
+      <th class="tablespace eventheading down">الجنسية</th>
+      <th class="tablespace eventheading down">الجنس</th>
+      <th class="tablespace eventheading down">متوسط العمر</th>
+      <th class="tablespace eventheading down">الإعاقة</th>
+      <th class="tablespace eventheading down">المستوى التعليمي</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,20 +27,20 @@
   <tbody>
     <% @companies.each do |company| %>
       <tr>
-        <td><%= company.companyName %></td>
-        <td><%= company.jobTitle %></td>
+        <td class="tablespace fonty"><%= company.companyName %></td>
+        <td class="tablespace fonty"><%= company.jobTitle %></td>
       <%#  <td><%= company.jobDescription %></td>
       <%#  <td><%= company.contactPerson %></td>
       <%#  <td><%= company.mobileNo %></td>
       <%#  <td><%= company.email %></td>
-        <td><%= company.nationality %></td>
-        <td><%= company.gender %></td>
-        <td><%= company.age %></td>
-        <td><%= company.disability %></td>
-        <td><%= company.education %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="tablespace fonty"><%= company.nationality %></td>
+        <td class="tablespace fonty"><%= company.gender %></td>
+        <td class="tablespace fonty"><%= company.age %></td>
+        <td class="tablespace fonty"><%= company.disability %></td>
+        <td class="tablespace fonty"><%= company.education %></td>
+        <td class="tablespace fonty"><%= link_to 'عرض', company %></td>
+        <td class="tablespace fonty"><%= link_to 'تعديل', edit_company_path(company) %></td>
+        <td class="tablespace fonty"><%= link_to 'مسح', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -44,4 +48,4 @@
 
 <br>
 
-<%= link_to 'ادخال شركة جديدة', new_company_path %>
+<%= link_to 'ادخال شركة جديدة', new_company_path, class:'fonty floatR'%>

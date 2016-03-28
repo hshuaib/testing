@@ -13,73 +13,73 @@
   
 <hr>  
 <br>
-  <div class="field fonty">
+  <div class="field fonty formpad">
 <h3>
  البيانات الشخصية
 </h3>
   <br>
   </div>
 
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :name, "الاسم"%><br>
     <%= f.text_field :name, :required => true  %>
   </div>
 </br>
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :QID, "الرقم الشخصي" %><br>
     <%= f.text_field :QID, :required => true  %>
   </div>
 </br>
 
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :image, "صورة البطاقة الشخصية"%><br>
     <%= f.file_field :image, :required => true  %>
   </div>
 </br>
 
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :nationality, "الجنسية"%><br>
-    <%= f.select(:nationality, Applicant::NATIONALITY_LIST, :required => true ) %>
+    <%= f.collection_select :nationality, Country.all, :name, :name, :required => true %>
   </div>
   </br>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :DateOfBirth, "تاريخ الميلاد"%><br>
-    <%= f.date_select :DateOfBirth, :required => true  %>
+    <%= f.date_select :DateOfBirth, :start_year=> 1950, :required => true  %>
   </div>
   </br>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :gender, "الجنس"%><br>
     <%= f.select(:gender, Applicant::SEX_LIST,:required => true)  %>
   </div>
   </br>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :status, "الحالة الإجتماعية" %><br>
     <%= f.select(:status,Applicant::STATUS_LIST, :required => true)  %>
   </div>
   </br>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :noOfChildren, "عدد الأطفال" %><br>
     <%= f.number_field :noOfChildren  %>
   </div>
   </br>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :livingArea, "مكان السكن"%><br>
     <%= f.text_field :livingArea, :required => true  %>
   </div>
   </br>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :phoneNo, "رقم الهاتف" %><br>
     <%= f.text_field :phoneNo %>
   </div>
   </br>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :mobileNo, "الجوال" %><br>
     <%= f.text_field :mobileNo, :required => true  %>
   </div>
@@ -87,7 +87,7 @@
   
 <hr>  
 
-  <div class="field fonty">
+  <div class="field fonty formpad">
 <h3>
 حالة الإعاقة 
 </h3>
@@ -98,7 +98,7 @@
 
 
 
-  <div class="field fonty">
+  <div class="field fonty formpad">
       <%= f.label :disability, "نوع الإعاقة", :required => true%>
     <%= f.check_box :disability, collection: 1..5 %> "إعاقة سمعية"<br>
 	  
@@ -109,22 +109,22 @@
   </div>
   
     </br>
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :details, "التفاصيل"%><br>
     <%= f.text_field :details, :required => true  %>
   </div>
     </br>
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :notes, "ملاحظات"%><br>
     <%= f.text_area :notes %>
   </div>
     </br>
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :age, "العمر عند الإصابة بالإعاقة" %><br>
     <%= f.text_field :age, :required => true  %>
   </div>
     </br>
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :reason, "أسباب الإصابة" %><br>
     <%= f.text_field :reason %>
   </div>
@@ -132,7 +132,7 @@
 <hr>  
 
 
-  <div class="field fonty">
+  <div class="field fonty formpad">
 	  <h3>
 المؤهلات والخبرات
 	  </h3>
@@ -141,19 +141,19 @@
  <br>
   </div>
 
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :education, "المستوى التعليمي"%><br>
     <%= f.select(:education,Applicant::EDUCATION_LIST, :required => true) %>
   </div>
   </br>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :workshop, "الدورات" %><br>
     <%= f.text_area :workshop %>
   </div>
   </br>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :currentJob, "هل تشغل وظيفة حاليًا"%><br>
     <%= f.label :currentJob, "نعم", :value => "true"  %>
     <%= f.radio_button :currentJob, true %>
@@ -162,31 +162,31 @@
   </div>
   </br>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :jobDescription, "الوظائف التي عملت بها"%><br>
     <%= f.text_area :jobDescription %>
   </div>
   </br>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :abilities, " الوظيفة التي تستطيع القيام بها" %><br>
     <%= f.text_area :abilities %>
   </div>
   </br>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :preference, "الوزارات/ المؤسسات المرشحة للتوظيف" %><br>
     <%= f.text_area :preference %>
   </div>
   </br>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :skills, "الخبرات"%><br>
     <%= f.text_field :skills %>
   </div>
   </br>
   
-  <div class="actions fonty">
+  <div class="actions fonty formpad">
     <%= f.submit %>
   </div>
   

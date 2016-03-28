@@ -1,59 +1,66 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Companyname:</strong>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p class="fonty">
+  <strong >اسم الشركة:</strong>
   <%= @company.companyName %>
 </p>
 
-<p>
-  <strong>Jobtitle:</strong>
+<p class="fonty">
+  <strong>المسمى الوظيفي :</strong>
   <%= @company.jobTitle %>
 </p>
 
-<p>
-  <strong>Jobdescription:</strong>
+<p class="fonty">
+  <strong>تفاصيل الوظيفة:</strong>
   <%= @company.jobDescription %>
 </p>
 
-<p>
-  <strong>Contactperson:</strong>
+<p class="fonty">
+  <strong>اسم مقدم الطلب:</strong>
   <%= @company.contactPerson %>
 </p>
 
-<p>
-  <strong>Mobileno:</strong>
+<p class="fonty">
+  <strong>رقم التواصل:</strong>
   <%= @company.mobileNo %>
 </p>
 
-<p>
-  <strong>Email:</strong>
+<p class="fonty">
+  <strong>البريد الالكتروني:</strong>
   <%= @company.email %>
 </p>
 
-<p>
-  <strong>Nationality:</strong>
+<p class="fonty">
+  <strong>الجنسية:</strong>
   <%= @company.nationality %>
 </p>
 
-<p>
-  <strong>Gender:</strong>
+<p class="fonty">
+  <strong>الجنس:</strong>
   <%= @company.gender %>
 </p>
 
-<p>
-  <strong>Age:</strong>
+<p class="fonty">
+  <strong>متوسط العمر:</strong>
   <%= @company.age %>
 </p>
 
-<p>
-  <strong>Disability:</strong>
+<p class="fonty">
+  <strong>نوع الإعاقة:</strong>
   <%= @company.disability %>
 </p>
 
-<p>
-  <strong>Education:</strong>
+<p class="fonty">
+  <strong>المستوى التعليمي:</strong>
   <%= @company.education %>
 </p>
-
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+<br>
+<br>
+<p class="fonty floatR" >
+<%= link_to 'تعديل', edit_company_path(@company)%> |
+<%= link_to 'رجوع', companies_path %>
+</p>

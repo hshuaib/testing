@@ -13,7 +13,7 @@
 <hr>  
 <br>
 
-  <div class="field fonty">
+  <div class="field fonty formpad">
 <h3>
 بيانات الوظيفة 
 </h3>
@@ -22,79 +22,79 @@
 
 
 <br/>
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :companyName, "اسم الشركة" %><br>
     <%= f.text_field :companyName %>
   </div>
   <br/>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :jobTitle, "اسم الوظيفة" %><br>
     <%= f.text_field :jobTitle %>
   </div>
   <br/>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :jobDescription, "تفاصيل الوظيفة" %><br>
     <%= f.text_area :jobDescription %>
   </div>
   <br/>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :contactPerson, "اسم مقدم الطلب" %><br>
     <%= f.text_field :contactPerson %>
   </div>
   <br/>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :mobileNo, "رقم التواصل" %><br>
     <%= f.text_field :mobileNo %>
   </div>
   <br/>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :email, "البريد الإلكتروني" %><br>
     <%= f.text_field :email %>
   </div>
   
   <br/>
   
-  <h3 class="field fonty">
+  <h3 class="field fonty formpad">
   مواصفات الموظف المطلوبة 
   </h3>
   <br/>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :nationality, "الجنسية" %><br>
-    <%= f.text_field :nationality %>
+    <%= f.collection_select :nationality, Country.all, :name, :name, :required => true %>
   </div>
   <br/>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :gender, "الجنس" %><br>
     <%= f.text_field :gender %>
   </div>
   <br/>
   
-  <div class="field fonty">
-    <%= f.label :age, "العمر" %><br>
+  <div class="field fonty formpad">
+    <%= f.label :age, "متوسط العمر" %><br>
     <%= f.number_field :age %>
   </div>
   <br/>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :disability, "نوع الإعاقة" %><br>
     <%= f.text_field :disability %>
   </div>
   <br/>
   
-  <div class="field fonty">
+  <div class="field fonty formpad">
     <%= f.label :education, "المستوى التعليمي" %><br>
     <%= f.text_field :education %>
   </div>
   <br/>
   
-  <div class="actions fonty">
+  <div class="actions fonty formpad">
     <%= f.submit %>
   </div>
 <% end %>
