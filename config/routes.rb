@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :news
   resources :companies
   resources :applicants
   root to: 'visitors#index'
