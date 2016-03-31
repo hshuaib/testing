@@ -1,0 +1,86 @@
+<p id="notice"><%= notice %></p>
+<br>
+<br>
+<br>
+
+<h2 class="fonty" align="center">الفعاليات</h2>
+<br>
+<br>
+
+
+
+    <% @events.each do |event| %>
+
+ 	<%= image_tag event.picture.url , width: '25%', align:'right'%>
+		
+	<br>
+	<br>
+	<div class="event">
+	
+	<h4 class="eventheading">
+		اسم الفعالية:
+			<%= event.name %> </h4>
+			
+	<h5 class="eventheading">
+		الموقع:
+			<%= event.place %> </h5>
+		
+	<h5 class="eventheading">
+		من
+			<%= event.datefrom %> 
+			
+		إلى
+			<%= event.dateto %> </h5>
+			
+	<h5 class="eventheading">
+		الوقت:
+			<%= event.time.strftime("%H:%M") %> </h5>
+		
+		
+	<p class="fonty">
+
+			<%= event.description %>
+	<br>
+	<br>
+	<br>
+		
+		<h5 class="eventheading">
+			للتسجيل
+			</h5>
+
+	<br>		
+	<br>
+	<br>
+	<p class="fonty" align="left">
+	<% if user_signed_in? %>
+	<%= link_to 'عرض', event %>
+
+	<%= link_to 'تعديل', edit_event_path(event) %>
+
+	<%= link_to 'مسح', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<% end %>
+
+	<br>
+	</p>
+	<br>
+	</p>
+
+	<br>
+	<br>
+	<hr>
+	<br>
+	<br>
+	<br> 
+	</div>
+
+	   <% end %>
+
+
+
+
+	<br>
+	<% if user_signed_in? %>
+	<%= link_to 'ادخال فعالية جديد', new_event_path, class:'fonty floatR'%>
+	<% end %>
+		
+
