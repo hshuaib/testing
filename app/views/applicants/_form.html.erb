@@ -155,9 +155,9 @@
   
   <div class="field fonty formpad">
     <%= f.label :currentJob, "هل تشغل وظيفة حاليًا"%><br>
-    <%= f.label :currentJob, "نعم", :value => "true"  %>
+    <%= f.label :currentJob, "نعم", :value => "نعم"  %>
     <%= f.radio_button :currentJob, true %>
-    <%= f.label :currentJob, "لا", :value => "false"  %>
+    <%= f.label :currentJob, "لا", :value => "لا"  %>
     <%= f.radio_button :currentJob, false %>
   </div>
   </br>
@@ -186,8 +186,13 @@
   </div>
   </br>
   
+  <div class="field fonty formpad">
+	<input type= "checkbox" required name=" إعاقةحركية" value="إعاقة حركية" id="disability"> بتقديمي هذا الطلب، أوافق على مشاركة معلوماتي الشخصية مع الجهات والمؤسسات الباحثة عن موظف<br>
+  </div>
+  
+  </br>
   <div class="actions fonty formpad">
-    <%= f.submit %>
+    <%= f.submit "حفظ" %>
   </div>
   
 <% end %>
