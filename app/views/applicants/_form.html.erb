@@ -45,7 +45,7 @@
   
   <div class="field fonty formpad">
     <%= f.label :DateOfBirth, "تاريخ الميلاد"%><br>
-    <%= f.date_select :DateOfBirth, :start_year=> 1950, :required => true  %>
+    <%= f.date_select :DateOfBirth, :start_year=> 1950, :end_year=> (Time.now.year-18), :required => true  %>
   </div>
   </br>
   
@@ -99,13 +99,13 @@
 
 
   <div class="field fonty formpad">
-      <%= f.label :disability, "نوع الإعاقة", :required => true%>
-    <%= f.check_box :disability, collection: 1..5 %> "إعاقة سمعية"<br>
 	  
-	  <br><input type= "checkbox" name="إعاقة سمعية"  value="إعاقة سمعية" id="disability"> إعاقة سمعية<br>
-	  <input type= "checkbox" name="إعاقة بصرية" value="إعاقة بصرية" id="disability"> إعاقة بصرية<br>
-	  <input type= "checkbox" name=" إعاقةحركية" value="إعاقة حركية" id="disability"> إعاقة حركية<br>
-	  <input type= "checkbox" name="إعاقة ذهنية" value="إعاقة ذهنية" id="disability"> إعاقة ذهنية<br>
+	  
+      <%= f.label :disability_chk, "نوع الإعاقة", :required => true%><br>
+    <%= f.collection_check_boxes :disability_ids, Disability.all, :name, :name, :required => true %>  <br>
+ 
+	  
+	
   </div>
   
     </br>
@@ -155,10 +155,9 @@
   
   <div class="field fonty formpad">
     <%= f.label :currentJob, "هل تشغل وظيفة حاليًا"%><br>
-    <%= f.label :currentJob, "نعم", :value => "نعم"  %>
-    <%= f.radio_button :currentJob, true %>
-    <%= f.label :currentJob, "لا", :value => "لا"  %>
-    <%= f.radio_button :currentJob, false %>
+    <%= f.radio_button :currentJob, true, :checked => true %> yes
+	<br>
+    <%= f.radio_button :currentJob, false %> no
   </div>
   </br>
   

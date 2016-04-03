@@ -113,6 +113,10 @@
   <strong>Skills:</strong>
   <%= @applicant.skills %>
 </p>
+<a href="#" onclick="window.print();return false;">print me</a> 
+<button onclick='window.print(); return false;' class='btn btn-primary'>Print</button>
+
+
 
 <%= link_to 'Edit', edit_applicant_path(@applicant) %> |
 <%= link_to 'Back', applicants_path %>

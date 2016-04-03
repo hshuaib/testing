@@ -64,6 +64,10 @@ class ApplicantsController < ApplicationController
     end
   end
 
+
+  def welcome_email
+  end 
+
   private
   # this below code for checking if logged in user is the admin!
     def admin_only
@@ -80,6 +84,12 @@ class ApplicantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def applicant_params
-      params.require(:applicant).permit(:name, :QID, :nationality, :DateOfBirth, :gender, :status, :noOfChildren, :livingArea, :phoneNo, :mobileNo, :disability, :details, :notes, :age, :reason, :education, :workshop, :currentJob, :jobDescription, :abilities, :preference, :skills, :image)
+      params.require(:applicant).permit("mnm","nnn","Afghanistan","ذكر","أعزب",5,"kjk","jkj","kj","jk","jk",
+      "jk","j","لايوجد","jkj","t","jk","","","","news2.jpg","image/jpeg",55338,"2016-04-0312:12:23.822808",
+      "1950-04-03","movement")
+      #permit(:name, 
+      #:QID, :nationality, :DateOfBirth, :gender, :status, :noOfChildren, :livingArea, :phoneNo, :mobileNo, 
+      #:disability_ids, :details, :notes, :age, :reason, :education, :workshop, :currentJob, :jobDescription, 
+      #:abilities, :preference, :skills, :image)
     end
 end
